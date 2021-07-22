@@ -172,138 +172,141 @@ $beats: 6
 $notes: 17
 
 #controls
-    text-align: center
-    width: 40vw
-    margin-left: 2vw
+  text-align: center
+  width: 40vw
+  margin-left: 2vw
 
 button, label, input
-    font-family: $fontFamily
+  font-family: $fontFamily
 
 button
-    display: inline-block
-    background: white
-    border: 1px solid black
-    padding: 0.3rem 1rem
-    margin: 0 10px 15px 10px
-    border-radius: 10px
-    cursor: pointer
-    font-size: 0.9rem
-    font-weight: 800
+  display: inline-block
+  background: white
+  border: 1px solid black
+  padding: 0.3rem 1rem
+  margin: 0 10px 15px 10px
+  border-radius: 10px
+  cursor: pointer
+  font-size: 0.9rem
+  font-weight: 800
 
 button:hover:enabled
-    color: white
-    border: 1px solid #db504a
-    transform: scale(1.02)
-    transition: 0.25s all
-    background: #db504a
+  color: white
+  border: 1px solid #db504a
+  transform: scale(1.02)
+  transition: 0.25s all
+  background: #db504a
 
 label
-    color: white
-    display: block
+  color: white
+  display: block
 
 input[type=number]
-    text-align: center
-    width: 140px
-    border: solid 3px transparent
-    margin: 15px 0
-    border-radius: 15px
+  text-align: center
+  width: 140px
+  border: solid 3px transparent
+  margin: 15px 0
+  border-radius: 15px
 
 input[type=number]:focus,input[type=number]:hover
-    outline: none
-    transform: scale(1.05)
-    transition: 0.3s all
+  outline: none
+  transform: scale(1.05)
+  transition: 0.3s all
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
-    -webkit-appearance: none
-    margin: 0
+  -webkit-appearance: none
+  margin: 0
 
 .notes
-    color: white
-    cursor: default
-    padding: 0 3px
-    padding-top: 0.611rem
-    border-bottom: none
-    font-size: 1.1rem
+  color: white
+  cursor: default
+  padding: 0 3px
+  padding-top: 0.611rem
+  border-bottom: none
+  font-size: 1.1rem
 
 #playable
-    position: absolute
-    top: 2vh
-    right: 2vw
-    font-size: 1.5rem
-    text-align: center
-    font-family: $fontFamily
-    padding-bottom: 5vh
+  position: absolute
+  top: 2vh
+  right: 2vw
+  font-size: 1.5rem
+  text-align: center
+  font-family: $fontFamily
+  padding-bottom: 5vh
 
 .column
-    display: inline-block
-    border: 1px solid black
-    border-right: 1px solid rgba(0,0,0,0.2)
+  display: inline-block
+  border: 1px solid black
+  border-right: 1px solid rgba(0,0,0,0.2)
 
 .row
-    cursor: pointer
-    color: rgba(0,0,0,0)
-    padding: 0 0.3vw
-    border-bottom: 1px solid rgba(0,0,0,0.2)
+  cursor: pointer
+  color: rgba(0,0,0,0)
+  padding: 0 0.3vw
+  border-bottom: 1px solid rgba(0,0,0,0.2)
 
 .row > span
-    visibility: hidden
+  visibility: hidden
 
 .select
-    background: rgba(230,0,0,0.5)!important
+  background: rgba(230,0,0,0.5)!important
 
 $selectedCell: -1
 @while $selectedCell < ($beats * 4) // adds thick black border at the end of each 4/4 beat
-    #playable > div.col-#{($selectedCell + 4)}.column
-        border-right: 3px solid black
-    $selectedCell: $selectedCell + 4
+  #playable > div.col-#{($selectedCell + 4)}.column
+    border-right: 3px solid black
+  $selectedCell: $selectedCell + 4
 
 #notes
-    border: 2px solid rgba(0,0,0,0.8)
-    div:nth-child(#{$notes})
-        padding-bottom: 2px!important
+  border: 2px solid rgba(0,0,0,0.8)
+  div:nth-child(#{$notes})
+    padding-bottom: 2px!important
 
 // Responsive queries
 
 @media screen and (min-width: 1720px)
-    #playable
-        font-size: 2.5rem
+  #playable
+    font-size: 2.5rem
 
-    .notes
-        padding-top: 1.29rem
-        font-size: 1.5rem
+  .notes
+    padding-top: 1.29rem
+    font-size: 1.5rem
+
+  #notes > div:nth-child(17)
+    padding-bottom: 4px!important
 
 @media screen and (max-width: 1145px)
-    #playable
-        position: relative
-    #controls
-        width: auto
-        margin-left: 0
-    #table
-        text-align: center
-        padding-left: 1.1rem
+  #playable
+    position: relative
+  #controls
+    width: auto
+    margin-left: 0
+  #table
+    text-align: center
+    padding-left: 1.1rem
 
 @media screen and (max-width: 565px)
-    #playable
-        font-size: 1.3rem
+  #playable
+    font-size: 1.3rem
 
-    .notes
-        padding-top: 0.548rem
-        font-size: 0.9rem
+  .notes
+    padding-top: 0.548rem
+    font-size: 0.9rem
 
 @media screen and (max-width: 503px)
-    #playable
-        font-size: 0.8rem
+  #playable
+    font-size: 0.8rem
 
-    .notes
-        padding-top: 0.304rem
-        font-size: 0.6rem
+  .notes
+    padding-top: 0.304rem
+    font-size: 0.6rem
 
 @media screen and (max-width: 340px)
-    #playable
-        font-size: 0.62rem
+  #playable
+    font-size: 0.62rem
 
-    .notes
-        padding-top: 0.305rem
-        font-size: 0.4rem
+  .notes
+    padding-top: 0.305rem
+    font-size: 0.4rem
 </style>

@@ -178,7 +178,7 @@ html
 body
     margin: 0
     padding: 0
-    background: #5E00FF
+    background: rgba(0,0,0,0.75)
 
 @media screen and (max-width: 300px)
     #app
