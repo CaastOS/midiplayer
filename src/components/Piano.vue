@@ -65,7 +65,6 @@ $blackKey_BorderColor: rgb(0,0,0)
 $whiteKey_BorderColor: rgb(0,0,0)
 
 #keyboard
-  opacity: 90%!important
   width: auto
   height: 17vw
   margin-top: 2vh
